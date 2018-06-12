@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<c3p0-config>
+
+	<default-config> 
+		<!-- 连接数据库的参数 -->
+		<property name="driverClass" >oracle.jdbc.driver.OracleDriver</property>
+		<property name="jdbcUrl" >jdbc:oracle:thin:@localhost:1521:orcl</property>
+		<property name="user">jxd3</property>
+		<property name="password">jxd3</property>
+		<!-- 连接参数的设置 -->
+		<property name="minPoolSize">3</property>
+		<property name="maxPoolSize">10</property>
+		<property name="initialPoolSize=3">5</property>
+		<property name="acquireIncrement">3</property>
+
+	</default-config>
+	
+	<!-- 如果要配置多个数据库,可以使用命名配置 -->
+	<named-config name="oracle">
+	</named-config>
+</c3p0-config>
