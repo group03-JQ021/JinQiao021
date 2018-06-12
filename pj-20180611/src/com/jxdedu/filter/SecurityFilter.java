@@ -30,7 +30,7 @@ public class SecurityFilter implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {
         HttpServletRequest req = (HttpServletRequest)request;
-        System.out.println("login filter:");
+        System.out.println("login filter :");
         
         String path = req.getServletPath();
         
