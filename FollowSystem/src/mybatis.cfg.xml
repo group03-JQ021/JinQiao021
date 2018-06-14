@@ -13,6 +13,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<!-- 类型别名 -->
 	<typeAliases>
 	  <typeAlias alias="Score" type="com.jxdedu.entity.Score"/>
+	  <typeAlias alias="SchoolEvaluation" type="com.jxdedu.entity.SchoolEvaluation"/>
 	</typeAliases>
 	
 	<!-- 也可以指定一个包名，MyBatis 会在包名下面搜索需要的 Java Bean，比如:-->
@@ -40,5 +41,6 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<!-- 配置映射文件，随着主配置文件的加载，映射文件一同被加载 -->
 	<mappers>
 		<mapper resource="com/jxdedu/mapper/score-mapper.xml" />
+		<mapper resource="com/jxdedu/mapper/school-evaluation-mapper.xml" />
 	</mappers>
 </configuration>
