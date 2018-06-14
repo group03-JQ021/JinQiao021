@@ -5,7 +5,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 <configuration>
 	<!-- 引入外部的配置文件 -->
 	<properties resource="db-oracle.properties"></properties>
-	<properties resource="db-mysql.properties"></properties>
+	<!-- <properties resource="db-mysql.properties"></properties> -->
 	<!-- 在控制台打印mybaits底层执行的SQL -->
 	<settings>
 		<setting name="logImpl" value="STDOUT_lOGGING"></setting>
