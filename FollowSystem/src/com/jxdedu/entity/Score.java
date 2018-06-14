@@ -8,32 +8,41 @@ package com.jxdedu.entity;
  * @date 2018年6月13日
  */
 public class Score {
-    private int stuId;      // 学生id
-    private int courseId;   // 课程id
+    private int stuID;      // 学生id
+    private int courseID;   // 课程id
     private int score;      // 学生成绩,
-    /**
-     * @return the stuId
-     */
-    public int getStuId() {
-        return stuId;
+    public Score(int stuID, int courseID, int score) {
+        super();
+        this.stuID = stuID;
+        this.courseID = courseID;
+        this.score = score;
+    }
+    public Score() {
+        super();
     }
     /**
-     * @param stuId the stuId to set
+     * @return the stuID
      */
-    public void setStuId(int stuId) {
-        this.stuId = stuId;
+    public int getStuID() {
+        return stuID;
     }
     /**
-     * @return the courseId
+     * @param stuID the stuID to set
      */
-    public int getCourseId() {
-        return courseId;
+    public void setStuID(int stuID) {
+        this.stuID = stuID;
     }
     /**
-     * @param courseId the courseId to set
+     * @return the courseID
      */
-    public void setCourseId(int courseId) {
-        this.courseId = courseId;
+    public int getCourseID() {
+        return courseID;
+    }
+    /**
+     * @param courseID the courseID to set
+     */
+    public void setCourseID(int courseID) {
+        this.courseID = courseID;
     }
     /**
      * @return the score
@@ -52,7 +61,7 @@ public class Score {
      */
     @Override
     public String toString() {
-        return "成绩 [学号:" + stuId + ", 课程号:" + courseId + ", 成绩:" + score + "]";
+        return "成绩 [学号:" + stuID + ", 课程号:" + courseID + ", 成绩:" + score + "]";
     }
     
     /* 
@@ -62,9 +71,9 @@ public class Score {
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + courseId;
+        result = prime * result + courseID;
         result = prime * result + score;
-        result = prime * result + stuId;
+        result = prime * result + stuID;
         return result;
     }
     /* 
@@ -79,10 +88,10 @@ public class Score {
         
         Score other = (Score) obj;
         
-        return (courseId == other.courseId 
+        return (courseID == other.courseID 
                 && score == other.score 
-                && stuId == other.stuId);
+                && stuID == other.stuID);
     }
-    
+
     
 }

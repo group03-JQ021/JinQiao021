@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jxdedu.dao.ScoreDao">
+<!-- Score 表字段
+名称                                      是否为空? 类型
+STUID                                     NOT NULL NUMBER(7)
+COURSEID                                           NUMBER(7)
+SCORE                                              NUMBER(7)
+ 
+ -->
+	<select id="getAll" resultType="com.jxdedu.entity.Score">
+		select stuid,courseid,score 
+		from score
+	</select>
+	
+	<update id="update" parameterType="com.jxdedu.entity.Score">
+		update score 
+		set score=#{score}
+		where stuID=#{stuID} and courseID=#{courseID}
+	</update>
+	
+</mapper>
