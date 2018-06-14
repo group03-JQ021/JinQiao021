@@ -5,21 +5,28 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="com.jxdedu.dao.ScoreDao">
 <!-- Score 表字段
-名称                                      是否为空? 类型
+名称                                      					是否为空? 	类型
 STUID                                     NOT NULL NUMBER(7)
 COURSEID                                           NUMBER(7)
 SCORE                                              NUMBER(7)
- 
  -->
-	<select id="getAll" resultType="com.jxdedu.entity.Score">
-		select stuid,courseid,score 
-		from score
-	</select>
-	
-	<update id="update" parameterType="com.jxdedu.entity.Score">
+ 	<!-- 添加一条新的成绩记录 -->
+ 	<insert id="addScore">
+ 		insert into score(stuID, courseID, score)
+ 		values(#{stuID},#{courseID}, #{score})
+ 	</insert>
+ 
+	<!-- 更新语句,按照给定的 stuID 和 courseID,更新其 score -->
+	<update id="updateScore" parameterType="Score">
 		update score 
 		set score=#{score}
 		where stuID=#{stuID} and courseID=#{courseID}
 	</update>
+	
+ 	<!-- 查询; 获取所有记录 -->
+	<select id="getAllScore" resultType="Score">
+		select stuid,courseid,score 
+		from score
+	</select>
 	
 </mapper>
