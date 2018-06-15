@@ -19,5 +19,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="getAllJobEvaluation" resultType="JobEvaluation">
 		select * from JobEvaluation
 	</select>
-	
+	<!-- 添加一条新的评价信息 -->
+ 	<insert id="addJobEvaluation" parameterType="JobEvaluation">
+ 		insert into JobEvaluation(DATEID, STUID, OPTIONID, EVALUATEPERSON, 
+ 			TOTALSCORE, EVALUATESCORE, JOBEVALUATECONTENT)
+ 		values(#{dateID}, #{stuID}, #{optionID}, #{evaluatePerson}, 
+ 			#{totalScore}, #{evaluateScore}, #{jobEvaluateContent})
+ 	</insert>
+ 
 </mapper>

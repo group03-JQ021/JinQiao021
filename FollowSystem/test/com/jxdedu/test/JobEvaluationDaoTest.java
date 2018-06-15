@@ -62,7 +62,7 @@ public class JobEvaluationDaoTest {
 
     public static void main(String[] args) {
         JobEvaluationDaoTest tester = new JobEvaluationDaoTest();
-        tester.test01();
+        // tester.test01();
 
         // update
         /*
@@ -72,12 +72,18 @@ public class JobEvaluationDaoTest {
          * val.setEvaluateContent("此人学习刻苦,基础牢固,学以致用, 评级为优"); tester.test02(val);
          */
 
-        // insert
-        /*
-         * JobEvaluation val = new JobEvaluation(); val.setStuID(1);
-         * val.setEvaluatePerson("猜猜我是谁"); val.setEvaluateScore(95);
-         * val.setEvaluateContent("此人学习刻苦, 评级为良"); tester.test03(val);
-         */
+        // add
+        
+         JobEvaluation val = new JobEvaluation(); 
+         val.setStuID(1);
+         val.setDateID(1);
+         val.setOptionID(1);
+         val.setEvaluatePerson("猜猜我是谁"); 
+         val.setTotalScore(95);
+         val.setEvaluateScore(95);
+         val.setJobEvaluateContent("工作很努力.");
+         tester.test03(val);
+         
 
         // get by ID
         /*
