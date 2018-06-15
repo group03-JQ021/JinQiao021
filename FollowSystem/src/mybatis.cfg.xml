@@ -11,16 +11,17 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	</settings>
 	
 	<!-- 类型别名 -->
-	<typeAliases>
+	<!-- <typeAliases>
 	  <typeAlias alias="Score" type="com.jxdedu.entity.Score"/>
 	  <typeAlias alias="SchoolEvaluation" type="com.jxdedu.entity.SchoolEvaluation"/>
-	</typeAliases>
+	  <typeAlias alias="JoblEvaluation" type="com.jxdedu.entity.JobEvaluation"/>
+	</typeAliases> -->
 	
 	<!-- 也可以指定一个包名，MyBatis 会在包名下面搜索需要的 Java Bean，比如:-->
-	<!-- 	<typeAliases>
-	  <package name="domain.blog"/>
+	<typeAliases>
+	  <package name="com.jxdedu.entity"/>
 	</typeAliases> 
-	 -->
+	
 	
 	<!-- 配置mybatis的框架环境 -->
 	<environments default="development">
@@ -42,5 +43,6 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<mappers>
 		<mapper resource="com/jxdedu/mapper/score-mapper.xml" />
 		<mapper resource="com/jxdedu/mapper/school-evaluation-mapper.xml" />
+		<mapper resource="com/jxdedu/mapper/job-evaluation-mapper.xml" />
 	</mappers>
 </configuration>
