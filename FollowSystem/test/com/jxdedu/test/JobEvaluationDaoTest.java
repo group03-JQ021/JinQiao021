@@ -30,6 +30,7 @@ public class JobEvaluationDaoTest {
      * 测试update
      */
     public void test02(JobEvaluation val) {
+        System.out.println("测试update");
         System.out.println(val);
         System.out.println("update:" + dao.updateJobEvaluation(val));
         session.commit();
@@ -39,6 +40,7 @@ public class JobEvaluationDaoTest {
      * 测试 add
      */
     public void test03(JobEvaluation val) {
+        System.out.println("测试 add");
         System.out.println(val);
         System.out.println("update:" + dao.addJobEvaluation(val));
         session.commit();
@@ -50,6 +52,7 @@ public class JobEvaluationDaoTest {
      * @param val
      */
     public void test04(JobEvaluation val) {
+        System.out.println("测试 getXXXByID");
         System.out.println("update:" + dao.getJobEvaluationByID(val));
     }
 
@@ -57,42 +60,35 @@ public class JobEvaluationDaoTest {
      * test for get total count
      */
     public void test05() {
+        System.out.println("test for get total count");
         System.out.println("当前记录总数为:" + dao.getTotalCount());
     }
 
     public static void main(String[] args) {
         JobEvaluationDaoTest tester = new JobEvaluationDaoTest();
         // tester.test01();
-
-        // update
-        /*
-         * JobEvaluation val = new JobEvaluation(); val.setEvaluateID(1);
-         * val.setStuID(1); val.setEvaluatePerson("猜猜我是谁");
-         * val.setEvaluateScore(96);
-         * val.setEvaluateContent("此人学习刻苦,基础牢固,学以致用, 评级为优"); tester.test02(val);
-         */
-
-        // add
+        JobEvaluation val = new JobEvaluation(); 
+        val.setStuID(0);
+        val.setDateID(1);
+        val.setOptionID(1);
+        val.setEvaluatePerson("猜猜我是谁"); 
+        val.setTotalScore(95);
+        val.setEvaluateScore(95);
+        val.setJobEvaluateContent("工作很努力.");
         
-         JobEvaluation val = new JobEvaluation(); 
-         val.setStuID(1);
-         val.setDateID(1);
-         val.setOptionID(1);
-         val.setEvaluatePerson("猜猜我是谁"); 
-         val.setTotalScore(95);
-         val.setEvaluateScore(95);
-         val.setJobEvaluateContent("工作很努力.");
-         tester.test03(val);
+        // update
+//        val.setStuID(1);
+//        tester.test02(val);
+        
+        // add
+        val.setStuID(2); 
+        //tester.test03(val);
          
-
         // get by ID
-        /*
-         * JobEvaluation val = new JobEvaluation(); val.setEvaluateID(1);
-         * tester.test04(val);
-         */
+        tester.test04(val);
 
         // get total count
-        // tester.test05();
+        tester.test05();
 
     }
 

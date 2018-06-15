@@ -27,4 +27,25 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  			#{totalScore}, #{evaluateScore}, #{jobEvaluateContent})
  	</insert>
  
+	<!-- 更新语句,按照给定的 (datID,stuID) 更新其余字段 -->
+	<update id="updateJobEvaluation" parameterType="JobEvaluation">
+		update JobEvaluation 
+		set optionID = #{optionID}, evaluatePerson = #{evaluatePerson}, 
+    		totalScore = #{totalScore}, evaluateScore = #{evaluateScore}, 
+    		jobEvaluateContent = #{jobEvaluateContent}
+		where DATEID = #{dateID} and STUID = #{stuID}
+	</update>
+	
+	
+	<select id="getJobEvaluationByID" resultType="JobEvaluation">
+		select * 
+		from JobEvaluation
+		where dateID=#{dateID} and stuID = #{stuID}
+	</select>
+	<select id="getTotalCount" resultType="int">
+		select count(*)
+		from JobEvaluation
+	</select>
+	
+ 
 </mapper>
