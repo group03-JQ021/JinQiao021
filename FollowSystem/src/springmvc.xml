@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       					   http://www.springframework.org/schema/beans/spring-beans.xsd
+       					   http://www.springframework.org/schema/mvc 
+						   http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd 
+       					   http://www.springframework.org/schema/context 
+       					   http://www.springframework.org/schema/context/spring-context.xsd">
+      	<!-- 开启Spring的自动组件扫描功能;
+      		开启后,会自动扫描指定package及其子package下的所有类,
+      		当需要用到这些包下的类的实例时,Spring会自动创建实例并注入到程序中. 
+      	 -->
+      	<context:component-scan base-package="com.jxdedu"></context:component-scan>
+      	
+      	<!-- 让Spring能识别控制器注解以及 -->
+ 		<mvc:annotation-driven></mvc:annotation-driven>
+</beans>

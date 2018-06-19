@@ -13,7 +13,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     
     <base href="<%=basePath%>">
     
-    <title>主页 |图书管理系统</title>
+    <title></title>
 	
     <!-- Bootstrap -->
     <link href="bootstrap-3.3.7/css/bootstrap.css" rel="stylesheet">
@@ -32,9 +32,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
  	<div class="container">
 	
-	<jsp:forward page="ManageBooksServlet"></jsp:forward>
+	<h1>Welcome ${username } ${password }</h1>
  
-
+	
     </div> <!-- /container -->
   
 	<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->	
